@@ -9,6 +9,7 @@
 #!chmod 755 ee.sh
 #!chmod 755 available.sh
 
+#run as ipython user_interface.py
 from tkinter import *
 from PIL import ImageTk,Image
 from tkinter import messagebox
