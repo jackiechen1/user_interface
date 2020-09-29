@@ -4,7 +4,7 @@ user interface for msi system
 try download userinterface.ipynb. If ee and avaliable didn't work, then probably need to upload ee.sh and avaliable.sh and change the script path inside the notebook
 user guide:
 use jupyter notebook version by jupyter hub or .py version by ipython
-https://github.com/jackiechen1/user_interface/tree/master/pic
+
 ![alt text](https://github.com/jackiechen1/user_interface/tree/master/pic/0.png)
 ![alt text](https://github.com/jackiechen1/user_interface/tree/master/pic/1.png)
 ![alt text](https://github.com/jackiechen1/user_interfaceto/pic/2.png)
