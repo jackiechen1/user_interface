@@ -6,8 +6,8 @@
 # In[1]:
 
 
-get_ipython().system("chmod 755 ee.sh")
-get_ipython().system("chmod 755 available.sh")
+get_ipython().system('chmod 755 ee.sh')
+get_ipython().system('chmod 755 available.sh')
 
 #run as ipython user_interface.py
 from tkinter import *
@@ -331,7 +331,6 @@ def open_cvr():
     #get all the file name and make it an array
     imagename = os.listdir(folder_path)
     current_path = os.getcwd()
-    
     global current_index
     current_index=0
     os.chdir(folder_path)
@@ -349,6 +348,9 @@ def open_cvr():
         global current_index
         if(current_index<n):
             current_index+=1
+        else:
+            os.chdir(current_path)
+            return
         print(current_index)
         image = Image.open(imagename[current_index])
         print(imagename[current_index])
@@ -362,6 +364,9 @@ def open_cvr():
         global current_index
         if(current_index>0):
             current_index-=1
+        else:
+            os.chdir(current_path)
+            return
         print(current_index)
         image = Image.open(imagename[current_index])
         print(imagename[current_index])
@@ -459,7 +464,6 @@ def create_cvr():
         get_ipython().system("mv {current_path+'/'+x} {folder_path+'/'}")
     os.chdir(folder_path)
     print(folder_path)
-    
     global current_index
     current_index=0
     image = Image.open(imagename[0])
@@ -474,6 +478,9 @@ def create_cvr():
         global current_index
         if(current_index<frame):
             current_index+=1
+        else:
+            os.chdir(current_path)
+            return
         image = Image.open(imagename[current_index])
         test_image = ImageTk.PhotoImage(image)
         my_labelimg = Label(win,image = test_image )
@@ -485,6 +492,9 @@ def create_cvr():
         global current_index
         if(current_index>0):
             current_index-=1
+        else:
+            os.chdir(current_path)
+            return
         image = Image.open(imagename[current_index])
         test_image = ImageTk.PhotoImage(image)
         my_labelimg = Label(win,image = test_image )
